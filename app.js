@@ -12,9 +12,7 @@ startButton.addEventListener('click', () =>{
     if (confirmAnswer === false) return;
 
     const firstName = prompt('First off, what\'s your first name?');
-    if (firstName === null) return;
     const lastName = prompt('And your last name?');
-    if (firstName === null) return;
 
     const firstAnswer = prompt('Was the first working vehicle made in 1672?');
     if (countAsAYes(firstAnswer)) ++correctCounter;

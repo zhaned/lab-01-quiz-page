@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { countAsAYes } from './utils.js'
+import { countAsAYes } from './utils.js';
 const startButton = document.getElementById('start-button');
 const displayResults = document.getElementById('display');
 
@@ -7,8 +7,8 @@ const displayResults = document.getElementById('display');
 startButton.addEventListener('click', () =>{
     let correctCounter = 0;
 
-    alert('Hello! Lets begin.');
-    const confirmAnswer = confirm('something');
+    alert('Hello there!');
+    const confirmAnswer = confirm('Are you sure you want to begin?');
     if (confirmAnswer === false) return;
 
     const firstName = prompt('First off, what\'s your first name?');
@@ -16,11 +16,11 @@ startButton.addEventListener('click', () =>{
     const lastName = prompt('And your last name?');
     if (firstName === null) return;
 
-    const firstAnswer = prompt('the first question');
+    const firstAnswer = prompt('Was the first working vehicle made in 1672?');
     if (countAsAYes(firstAnswer)) ++correctCounter;
-    const secondAnswer = prompt('the second question');
+    const secondAnswer = prompt('Can your bike be considered a car?');
     if (!countAsAYes(secondAnswer)) ++correctCounter;
-    const thirdAnswer = prompt('the third question');
+    const thirdAnswer = prompt('Was Henry Ford the first person to make large scale production of affordable cars?');
     if (!countAsAYes(thirdAnswer)) ++correctCounter;
 
     const completeString = `Hello, ${firstName} ${lastName}. You got ${correctCounter} out of 3 answers correct!`;

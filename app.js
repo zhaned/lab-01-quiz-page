@@ -18,15 +18,15 @@ startButton.addEventListener('click', () =>{
 
     const firstAnswer = prompt(`Alright, ${firstName} ${lastName}. Lets begin. Was the first working vehicle made in 1672? (Yes/No)`);
     if (countAsAYes(firstAnswer)) ++correctCounter;
-    const secondAnswer = prompt(`Can your bike be considered a car?`);
+    const secondAnswer = prompt(`Can your bike be considered a car? (Yes/No)`);
     if (!countAsAYes(secondAnswer)) ++correctCounter;
     const thirdAnswer = prompt(`Was Henry Ford the first person to make large scale production of affordable cars? (Yes/No)`);
     if (!countAsAYes(thirdAnswer)) ++correctCounter;
 
-    alert(`Thank you! Your results are posted below the submit button.`);
+    alert(`Thank you for participating in this quiz!`);
     preReading.style.display = 'none';
 
-    const completeString = `Hello, ${firstName} ${lastName}. You got ${correctCounter} out of 3 answers correct!`;
+    const completeString = `Congratulations, ${firstName} ${lastName}. You got ${correctCounter} out of 3 answers correct!`;
     displayResults.textContent = completeString;
 });
 // set event listeners to update state and DOM

@@ -1,18 +1,18 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-
+import { countAsAYes } from '../utils.js';
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
+test('should expect a true for inputs that start with y', (expect) => {
     const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = false;
+    const actual = countAsAYes('yeis');
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('should expect a false for inputs that don\'t start with y', (expect) => {
+    const expected = false;
+    const actual = countAsAYes('neis');
+
     expect.equal(actual, expected);
 });

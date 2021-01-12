@@ -27,11 +27,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 80%;
     margin-bottom: calc(var(--footer-height));
+    color: #e0e0e0;
+    margin-top: 25px;
+    background-image: url('https://media.istockphoto.com/vectors/cars-collage-vector-id462979169');
 }
 
 section {
-    background-color: var(--color5);
+    background-color: #494a58;
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -62,7 +66,7 @@ footer {
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -74,11 +78,16 @@ h2 {
     animation: pulse 5s infinite ease-in-out;
 }
 
+.text-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 header img {
     height: var(--header-height);
 }
-
-
 
 content {
     width: 80%;
@@ -86,6 +95,11 @@ content {
 
 p {
     margin: var(--gutter);
+}
+
+li{
+    margin-left: 25px;
+    list-style-type: disc;
 }
   
 footer {
